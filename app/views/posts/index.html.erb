@@ -1,0 +1,13 @@
+
+<h1>Listing Indys</h1>
+
+<%= link_to 'New Indagram', new_post_path %>
+ 
+  <% @posts.each_with_index do |post, index| %>
+      <div id=post<%=index%>>
+      <td> <img src=<%=post.image%> </td>
+      <td><%= post.title %></td>
+      <td><%= post.text %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
+    </div>
+  <% end %>
