@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'users#logout'
   root 'sessions#welcome'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 end
