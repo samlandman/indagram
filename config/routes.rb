@@ -5,6 +5,7 @@ Rails.application.routes.draw do
    post 'login', to: 'sessions#create'
    get 'welcome', to: 'sessions#welcome'
 
+  get '/logout', to: 'users#logout'
   root 'sessions#welcome'
 
   resources :posts

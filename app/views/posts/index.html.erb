@@ -2,6 +2,8 @@
 <h1>Listing Indys</h1>
 
 <%= link_to 'New Indagram', new_post_path %>
+<%= link_to 'Sign Out', '/logout' %>
+
  
   <% @posts.each_with_index do |post, index| %>
       <div id=post<%=index%>>
